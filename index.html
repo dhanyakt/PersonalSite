@@ -10,10 +10,10 @@
 
 </head>
 <body>
-    <div>
+    <header>
         <!-- Navbar -->
         <nav >
-            <div class="nav-wrapper ">
+            <div class="nav-wrapper grey darken-4  divider">
                 <a href="#!" class="brand-logo">Logo</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
@@ -28,26 +28,31 @@
                 </ul>
             </div>
         </nav>
-    </div>
+    </header>
 
-    <div class="carousel carousel-slider" data-bind="foreach: carouselList" data-indicators="true">
-        <div class="carousel-fixed-item left">
-          <i class="material-icons">&#xE408;</i>
+    <main class="row  blue-grey darken-2 white-text">
+        <div class="col s12 center-align">
+            <h3> Web Developer</h3>
+            <p class="flow-text ">I'm a Front End Web developer located in Charlotte, NC.</p>
+            <a class="waves-effect waves-light btn ">Learn</a>
         </div>
-        <a class="carousel-item" >
-            <ul id="csrouselImage">
-                <li class=" white-text" href="#one!">
-                    <div >
-                        <img data-bind="attr: {src: imgSrc}" alt="carouselImage">
-                        <p class="white-text">This is your first panel</p>
-                    </div>
-                </li>
-            </ul>
-        </a>
-        <div class="carousel-fixed-item center">
-          <i class="material-icons">&#xE409;</i>
+    </main>
+
+    <section class="row">
+        <div class="col s12 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="images/dhanya.jpg">
+                </div>
+                <div class="card-content center-align flow-text">
+                    <h4>Dhanya</h4>
+                    <p>Web Developer</p>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+
 
 
     <!--Script tags -->

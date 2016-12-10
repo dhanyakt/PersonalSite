@@ -1,0 +1,41 @@
+* {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing: border-box;
+/*    border: 1px solid red;*/
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size:medium;
+}
+
+.profile {
+    width: 50%;
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+    main{
+        background-image: url("http://mdbootstrap.com/images/regular/city/img%20(6).jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        font-family: "Roboto Condensed";
+        text-shadow: 5px 5px 15px #333;
+        height: 100vh;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        background-image: none;
+        height: 0;
+        margin: 0;
+        padding: 10px;
+    }
+}
