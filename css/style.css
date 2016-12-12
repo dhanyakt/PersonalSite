@@ -11,12 +11,21 @@ body {
     font-size:medium;
 }
 
-.profile {
-    width: 50%;
+
+.profilePic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
 }
 
+.nature {
+    width: 100%;
+}
 
-
+h4 {
+    padding:15px;
+}
 @media screen and (min-width: 600px) {
 
     main{
