@@ -11,11 +11,21 @@ body {
     font-size:medium;
 }
 
+.img-wrapper {
+    height: 30%;
+}
 
+.pic {
+    margin-top: 25%;
+    border: 5px solid white;
+}
+
+/* Image in a circle */
 .profilePic {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 5px solid white;
     border-radius: 50%;
 }
 
@@ -26,7 +36,8 @@ body {
 h4 {
     padding:15px;
 }
-@media screen and (min-width: 600px) {
+
+@media screen and (min-width: 500px) {
 
     main{
         background-image: url("http://mdbootstrap.com/images/regular/city/img%20(6).jpg");
@@ -47,4 +58,38 @@ h4 {
         margin: 0;
         padding: 10px;
     }
+}
+
+/* flip test */
+
+#f1_container {
+    z-index: 1;
+    perspective: 1000px;
+}
+#f1_card {
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+
+#click_container:click #f1_card {
+  transform: rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+}
+
+.face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.face.back {
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  background-color: #aaa;
 }

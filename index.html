@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
-<body>
+<body class="grey lighten-2">
     <header>
         <!-- Navbar -->
         <nav >
@@ -30,29 +30,10 @@
         </nav>
     </header>
 
-    <!-- Carourel -->
-    <div class="carousel carousel-slider " data-indicators="true">
-        <div class="carousel-fixed-item left-align">
-            <a class="btn-floating btn-large waves-effect waves-light red "><i class="material-icons">&#xE408;</i></a>
-        </div>
-         <div class="carousel-fixed-item right-align">
-            <a class="btn-floating btn-large waves-effect waves-light red nav-right"><i class="material-icons">&#xE409;</i></a>
-        </div>
-        <div class="card-panel carousel-item">
-                <img src="http://lorempixel.com/800/400/food/1">
-                <span class="card-title white-text ">Card Title</span>
-            </div>
-                    <div class="card-panel carousel-item">
-                            <img src="http://lorempixel.com/800/400/food/3">
-                            <span class="card-title white-text">Card Title</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- Background Image -->
+
     <main class="row  blue-grey darken-2 white-text">
         <div class="col s12 center-align">
             <h3> Web Developer</h3>
@@ -61,75 +42,55 @@
         </div>
     </main>
 
+
     <!-- Cards for project -->
-    <section class="row">
-        <div class="col s12 l3">
-            <div class="card">
+    <section class="row  grey lighten-2">
+        <div class="col s12 m6 l3">
+            <div class="card large">
                 <div class="card-content">
-                    <div class=" profilePic ">
-                        <img src="images/dhanya.jpg" width="100" height="100" class=" profilePic ">
-                    </div>
-                    <div class="card-content">
-                        <p >I am a very simple card</p>
-                    </div>
+                    <span class="card-title">Skills</span>
                 </div>
                 <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">add</i></a>
+                    <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">add</i></a>
                 </div>
             </div>
         </div>
-        <div class="col s12 l9">
-            <div class="row">
-                <div class="col l3">
-                    <div class="card">
-                        <div class=" card-content imgDiv ">
-                            <img src="http://lorempixel.com/100/50/nature/6" class="nature">
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
+
+        <div class="col s12 m6 l3">
+            <div class="card large">
+                <div class="yellow center-align img-wrapper">
+                    <img src="images/dhanya.jpg" class="circle pic">
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l3 ">
+            <div id="f1_container">
+                <div class="card large" id="f1_card">
+                    <div class="card-content front face">
+                        <span class="card-title">Projects</span>
+                        <p>List the projects</p>
+                    </div>
+                    <div class="card-content back face">
+                         <div class="yellow center-align img-wrapper">
+                            <img src="images/dhanya.jpg" class="circle pic">
                         </div>
                     </div>
                 </div>
-                <div class="col l3">
-                    <div class="card ">
-                        <div class=" card-content imgDiv ">
-                            <img src="http://lorempixel.com/100/50/nature/6" class="nature">
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
+            </div>
+        </div>
+
+        <!-- card flip -->
+        <div class="col s12 m6 l3">
+            <div id="f1_container">
+                <div class="card large" id="f1_card">
+                    <div class="card-content front face">
+                        <p>Front</p>
                     </div>
-                </div>
-                <div class="col l3">
-                    <div class="card ">
-                        <div class=" card-content imgDiv ">
-                            <img src="http://lorempixel.com/100/50/nature/6" class="nature">
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l3">
-                    <div class="card ">
-                        <div class=" card-content imgDiv ">
-                            <img src="http://lorempixel.com/100/50/nature/6" class="nature">
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
+                    <div class="card-content back face">
+                        <p>Back</p>
                     </div>
                 </div>
             </div>
@@ -137,7 +98,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="grey">
+    <footer class="grey lighten-2">
         <div>
             <h5 class="center-align">Lets Connect</h5>
         </div>
