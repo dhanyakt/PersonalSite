@@ -7,21 +7,21 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
 </head>
-<body class="grey lighten-2">
+
+<body class="grey lighten-5">
     <header>
         <!-- Navbar -->
         <nav >
-            <div class="nav-wrapper grey darken-4  divider">
-                <a href="#!" class="brand-logo">Logo</a>
+            <div class="nav-wrapper grey darken-4 divider">
+                <a href="#!" class="brand-logo right">Logo</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
+                <ul class="left hide-on-med-and-down">
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <ul class="side-nav " id="mobile-demo">
+                <ul class="side-nav" id="mobile-demo">
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -29,76 +29,101 @@
             </div>
         </nav>
     </header>
+    <div class="divider"></div>
 
 
-
-    <!-- Background Image -->
-
-    <main class="row  blue-grey darken-2 white-text">
-        <div class="col s12 center-align">
-            <h3> Web Developer</h3>
-            <p class="flow-text ">I'm a Front End Web developer located in Charlotte, NC.</p>
-            <a class="waves-effect waves-light btn ">Learn</a>
-        </div>
-    </main>
+    <!-- Slider Wrapper -->
+    <div class="slider">
+        <ul class="slides" data-bind="foreach: carouselList">
+            <li>
+                <img data-bind="attr:{src: imgSrc}" alt="projectImages">
+                <div class="caption right-align flow-text">
+                    <h4 data-bind="text: title"></h4>
+                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+            </li>
+        </ul>
+    </div>
 
 
     <!-- Cards for project -->
-    <section class="row  grey lighten-2">
-        <div class="col s12 m6 l3">
-            <div class="card large">
-                <div class="card-content">
-                    <span class="card-title">Skills</span>
+    <section class="row grey lighten-5">
+
+        <!-- About  Card -->
+        <article class="col s12 m6 l3 section scrollspy" id="about">
+            <div id="f1_container">
+                <div class="card medium" id="f1_card">
+                    <div class="green center-align img-wrapper front face">
+                        <img src="images/dhanya.jpg" class="circle pic">
+                        <h5> Dhanya</h5>
+                        <h6>Web Developer</h6>
+                        <div class="card-content">
+                            <p> I am Front end web developer located in Charlotte,NC</p>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <div class="card-back black-text back face">
+                        <h5>About Me</h5>
+                    </div>
                 </div>
-                <div class="card-action">
-                    <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">add</i></a>
-                    <a class="btn-floating btn-large waves-effect waves-light yellow"><i class="material-icons">add</i></a>
+            </div>
+        </article>
+        <!-- First card -->
+        <div class="col s12 m6 l3">
+            <div class="card medium">
+                <div class="card-content skill teal darken-4">
+                   <span class="card-title white-text">Skills</span>
+                </div>
+                    <ul data-bind="foreach: skillList">
+                        <li>
+                            <ul class="collection" data-bind="foreach: skill">
+                                <li class="collection-item">
+                                    <span data-bind="text: $data"></span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
 
-        <div class="col s12 m6 l3">
-            <div class="card large">
-                <div class="yellow center-align img-wrapper">
-                    <img src="images/dhanya.jpg" class="circle pic">
-                </div>
-            </div>
-        </div>
 
+
+        <!-- Project card -->
         <div class="col s12 m6 l3 ">
             <div id="f1_container">
-                <div class="card large" id="f1_card">
-                    <div class="card-content front face">
-                        <span class="card-title">Projects</span>
-                        <p>List the projects</p>
-                    </div>
-                    <div class="card-content back face">
-                         <div class="yellow center-align img-wrapper">
-                            <img src="images/dhanya.jpg" class="circle pic">
+                <div class="card medium" id="f1_card">
+                    <div class="project black-text front face">
+                        <div class="card-content green darken-3">
+                            <span class="card-title white-text">Projects</span>
                         </div>
+                    </div>
+                    <!-- Back Face -->
+                    <div class="center-align grey-text back face">
+                        <h6>Links</h6>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- card flip -->
+        <!-- card flip Contact Card  -->
         <div class="col s12 m6 l3">
             <div id="f1_container">
-                <div class="card large" id="f1_card">
-                    <div class="card-content front face">
-                        <p>Front</p>
+                <div class="card medium" id="f1_card">
+                    <div class="card-content contact red darken-2 front face">
+                        <span class="card-title">Location</span>
                     </div>
-                    <div class="card-content back face">
+                    <div class="card-back back face">
                         <p>Back</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="divider"></div>
 
     <!-- Footer -->
-    <footer class="grey lighten-2">
+    <footer class="grey lighten-5">
         <div>
             <h5 class="center-align">Lets Connect</h5>
         </div>
