@@ -1,9 +1,16 @@
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: 'zocial', sans-serif;
+  align-items: center;
+}
+
 * {
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     -ms-box-sizing:border-box;
     box-sizing: border-box;
-/*    border: 1px solid red;*/
 }
 
 html,body {
@@ -73,32 +80,3 @@ h4 {
   background-color: white;
 }
 
-/* Card flip by me */
-/*.flip-container {
-    perspective: 700px;
-}
-
-#card {
-    width: 380px;
-    height: 400px;
-}
-.card-flip {
-    transition: all 0.6s linear;
-    transform-style: preserve-3d;
-}
-
-.card-flip:hover {
-    transform: rotateY(180deg);
-}
-
-.back {
-    transform: rotateY(180deg);
-    height: 400px;
-}
-
-.front,
-.back {
-    backface-visibility: hidden;
-    text-align: center;
-    border: 1px solid yellow;
-}*/

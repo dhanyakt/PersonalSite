@@ -4,6 +4,7 @@ $(document). ready(function(argument) {
 });
 
 
+
 var skills = [{
     "skill_list": ["HTML5","CSS3","JavaScript","jQuery","Java","Ajax"]
 }];
@@ -11,6 +12,25 @@ var skills = [{
 var educationList = [{
     "education": ["B.Tech(Information Technology)","Nanodegree Front End development"]
 }];
+
+var links = [{
+    "title": "github",
+    "url": "https://github.com/dhanyakt",
+    "image": ""
+},{
+    "title": "linkedin",
+    "url": "",
+    "image": ""
+},{
+    "title": "gmail",
+    "url": "",
+    "image": ""
+},{
+    "title": "gmail",
+    "url": "",
+    "image": ""
+}];
+
 
 
 var contentList = [{
