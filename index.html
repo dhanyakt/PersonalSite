@@ -7,19 +7,20 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
-<body class="grey lighten-5">
+<body class="grey lighten-4">
     <header>
         <!-- Navbar -->
         <nav >
-            <div class="nav-wrapper grey darken-4 divider">
+            <div class="nav-wrapper pink accent-3 divider">
                 <a href="#!" class="brand-logo right">Logo</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="left hide-on-med-and-down">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="active"><a href="#about">About</a></li>
+                    <li class="active"><a href="#projects">Projects</a></li>
+                    <li class="active"><a href="#contact">Contact</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="#about">About</a></li>
@@ -31,103 +32,121 @@
     </header>
     <div class="divider"></div>
 
+    <main role="main">
+        <!-- Slider Wrapper -->
+        <section class="slider grey lighten-3">
+            <ul class="slides" data-bind="foreach: carouselList">
+                <li>
+                    <img class="responsive-img" data-bind="attr:{src: imgSrc}" alt="projectImages">
+                    <div class="caption left-align">
+                        <h3 class="pink-text" data-bind="text: title"></h3>
+                    </div>
+                </li>
+            </ul>
+        </section>
 
-    <!-- Slider Wrapper -->
-    <div class="slider">
-        <ul class="slides" data-bind="foreach: carouselList">
-            <li>
-                <img data-bind="attr:{src: imgSrc}" alt="projectImages">
-                <div class="caption right-align flow-text">
-                    <h4 data-bind="text: title"></h4>
-                    <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-
-    <!-- Cards for project -->
-    <section class="row grey lighten-5">
-
-        <!-- About  Card -->
-        <article class="col s12 m6 l3 section scrollspy" id="about">
-            <div id="f1_container">
-                <div class="card medium" id="f1_card">
-                    <div class="green center-align img-wrapper front face">
-                        <img src="images/dhanya.jpg" class="circle pic">
-                        <h5> Dhanya</h5>
-                        <h6>Web Developer</h6>
-                        <div class="card-content">
-                            <p> I am Front end web developer located in Charlotte,NC</p>
+        <!-- Cards for project -->
+        <div class="row grey lighten-3">
+            <!-- About  Card -->
+            <article class="col s12 m6 l3 section scrollspy" id="about">
+                <div id="f1_container">
+                    <div class="card medium" id="f1_card">
+                        <div class=" pink accent-3 center-align img-wrapper front face">
+                            <img src="images/dhanya.jpg" class="circle pic">
+                            <h5> Dhanya</h5>
+                            <h6>Web Developer</h6>
+                            <div class="card-content">
+                                <p> I am Front end web developer located in Charlotte,NC</p>
+                            </div>
                         </div>
-                        <div class="divider"></div>
-                    </div>
-                    <div class="card-back black-text back face">
-                        <h5>About Me</h5>
+                        <div class="card-back card medium black-text back face">
+                            <div class="card-content">
+                                <h6>About Me</h6>
+                                <p>Passionate about front end development</p>
+                                <a class="waves-effect waves-light btn pink">Resume</a>
+                            </div>
+                            <div class="card-action">
+                                <a class="btn-floating btn-small waves-effect waves-light blue"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                                <a class="btn-floating btn-small waves-effect waves-light green"><i class="fa fa-github" aria-hidden="true"></i></a>
+                                <a class="btn-floating btn-small waves-effect waves-light red"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </article>
-        <!-- First card -->
-        <div class="col s12 m6 l3">
-            <div class="card medium">
-                <div class="card-content skill teal darken-4">
-                   <span class="card-title white-text">Skills</span>
+            </article>
+
+            <!-- Education card -->
+            <article class="col s12 m6 l3">
+                <div class="card medium ">
+                    <div class="card-content pink">
+                        <span class="card-title white-text">Education</span>
+                    </div>
+                    <ul data-bind="foreach: courseList">
+                        <ul class="collection" data-bind="foreach: course">
+                            <li class="collection-item" data-bind="text: $data"></li>
+                        </ul>
+                    </ul>
+                    <div class="card-action">
+                        <a href="https://www.udacity.com/">Udacity</a>
+                    </div>
                 </div>
+            </article>
+
+            <!-- Skill card -->
+            <article class="col s12 m6 l3">
+                <div class="card medium">
+                    <div class="card-content pink">
+                        <span class="card-title white-text"> Skills</span>
+                    </div>
                     <ul data-bind="foreach: skillList">
-                        <li>
-                            <ul class="collection" data-bind="foreach: skill">
-                                <li class="collection-item">
-                                    <span data-bind="text: $data"></span>
-                                </li>
-                            </ul>
-                        </li>
+                        <ul class="collection" data-bind="foreach: skill">
+                            <li class="collection-item" data-bind="text: $data"></li>
+                        </ul>
                     </ul>
                 </div>
-            </div>
-        </div>
+            </article>
 
-
-
-        <!-- Project card -->
-        <div class="col s12 m6 l3 ">
-            <div id="f1_container">
-                <div class="card medium" id="f1_card">
-                    <div class="project black-text front face">
-                        <div class="card-content green darken-3">
+           <!--Project Card  -->
+            <article class="col s12 m6 l3">
+                    <div class="card medium">
+                        <div class=" card-content pink">
                             <span class="card-title white-text">Projects</span>
                         </div>
+                        <ul class="collection" data-bind="foreach: carouselList">
+                            <li class="collection-item" data-bind="text: title">Alvin</li>
+                        </ul>
+                        <div class="card-action">
+                            <a class="btn-floating btn-small waves-effect waves-light purple" href="https://github.com/dhanyakt"><i class="fa fa-github" aria-hidden="true"></i>Project Link</a>
+                        </div>
                     </div>
-                    <!-- Back Face -->
-                    <div class="center-align grey-text back face">
-                        <h6>Links</h6>
-                    </div>
-                </div>
-            </div>
+            </article>
         </div>
-
-        <!-- card flip Contact Card  -->
-        <div class="col s12 m6 l3">
-            <div id="f1_container">
-                <div class="card medium" id="f1_card">
-                    <div class="card-content contact red darken-2 front face">
-                        <span class="card-title">Location</span>
-                    </div>
-                    <div class="card-back back face">
-                        <p>Back</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="divider"></div>
+    </main>
 
     <!-- Footer -->
-    <footer class="grey lighten-5">
-        <div>
-            <h5 class="center-align">Lets Connect</h5>
+    <footer class="page-footer pink accent-3">
+        <div class="container">
+            <div class="row ">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class=" white-text text-lighten-2">Let's Connect </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <a class="btn-floating btn-small waves-effect waves-light blue-grey darken-3"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-small waves-effect waves-light blue-grey"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a class="btn-floating btn-small waves-effect waves-light red"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                </div>
+            </div>
         </div>
+            <div class="footer-copyright pink ">
+                <div class="container">
+                    © 2016 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
     </footer>
+
 
 
     <!--Script tags -->
