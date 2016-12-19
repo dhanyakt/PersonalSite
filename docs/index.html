@@ -1,1 +1,170 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="description" content="Front End Developer located in Charlotte,NC"><meta name="keywords" content="HTML,CSS3,JavaScript, frameworks, responsive web design,web developer, material design, SEO, website optimization, jasmine test cases, freelance front end developer"><meta name="author" content="Dhanya Kuttikkatt Thilakan"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dhanya Kuttikkatt Thilakan | Front End Developer</title><link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"><style>.pic,.profilePic{border:5px solid #fff}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}body,html{font-family:"Roboto Condensed light",sans-serif;font-size:medium}img{max-width:100%}@media screen and (min-width:800px){.slider,.slides{height:600px}}.img-wrapper,.wrap{height:30%;width:100%}.card-back{width:100%}.pic{margin-top:25%}.profilePic{display:block;margin-left:auto;margin-right:auto;border-radius:50%}#f1_container{z-index:1;perspective:1000px}#f1_card{transform-style:preserve-3d;transition:all 1s linear}#click_container:click #f1_card,#f1_container:hover #f1_card{transform:rotateY(180deg);box-shadow:-5px 5px 5px #aaa}.face{position:absolute;backface-visibility:hidden}.face.back{transform:rotateY(180deg);text-align:center;background-color:#fff}#github-image{display:block;margin:4px auto auto}</style></head><body class="grey lighten-4"><header><nav><div class="nav-wrapper pink darken-1 divider"><a href="#!" class="brand-logo right">Web developer</a> <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a><ul class="left hide-on-med-and-down"><li class="active"><a href="#about">About</a></li><li class="active"><a href="#education">Education</a></li><li class="active"><a href="#projects">Projects</a></li><li class="active"><a href="#contact">Contact</a></li></ul><ul class="side-nav" id="mobile-demo"><li><a href="#about">About</a></li><li><a href="#education">Education</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div></nav></header><div class="divider"></div><main class="container"><section class="slider grey lighten-3"><ul class="slides" data-bind="foreach: carouselList"><li><img class="responsive-img" data-bind="attr:{src: imgSrc}" alt="projectImages" id="slider-img"><div class="caption left-align"><h3 class="pink-text" data-bind="text: title"></h3></div></li></ul></section></main><div class="row grey lighten-3"><article class="col s12 m6 l3" id="about"><div id="f1_container"><div class="card medium" id="f1_card"><div class="pink accent-3 center-align img-wrapper front face"><img src="images/dhanya.jpg" class="circle pic"><h5>Dhanya</h5><h6>Web Developer</h6><div class="card-content"><p>I am Front end web developer located in Charlotte,NC</p></div></div><div class="card-back card medium black-text back face"><div class="card-content"><h6>About Me</h6><p>Passionate about front end development</p><a href="https://docs.google.com/document/d/1ghQYpUTSItw3jxQeuxC7__Txnp9a-lukOz9DfaaL9bo/edit?usp=sharing" class="waves-effect waves-light btn pink">Resume</a></div><div class="card-action"><ul data-bind="foreach : urlList"><a data-bind="attr:{href: url}" class="waves-effect waves-light white"><img data-bind="attr: {src: image}"></a></ul></div></div></div></div></article><article class="col s12 m6 l3" id="education"><div class="card medium"><div class="card-content pink accent-3"><span class="card-title white-text">Education</span></div><ul data-bind="foreach: courseList"><ul class="collection" data-bind="foreach: course"><li class="collection-item" data-bind="text: $data"></li></ul></ul><div class="card-action"><a href="https://www.udacity.com/">Udacity</a></div></div></article><article class="col s12 m6 l3"><div class="card medium"><div class="card-content pink accent-3"><span class="card-title white-text">Skills</span></div><ul data-bind="foreach: skillList"><ul class="collection" data-bind="foreach: skill"><li class="collection-item" data-bind="text: $data"></li></ul></ul></div></article><article class="col s12 m6 l3" id="projects"><div class="card medium"><div class="card-content pink accent-3"><span class="card-title white-text">Projects</span></div><ul class="collection" data-bind="foreach: carouselList"><li class="collection-item" data-bind="text: title">Alvin</li></ul><div class="card-action"><a class="btn-floating btn-small waves-effect waves-light white" href="https://github.com/dhanyakt"><img src="images/github.png" alt="github logo" id="github-image"></a></div></div></article></div><footer class="page-footer pink accent-3" id="contact"><div class="container"><div class="row"><div class="col l6 s12"><h5 class="white-text">Footer Content</h5><h6 class="white-text text-lighten-1">Let's Connect</h6></div><div class="col l4 offset-l2 s12"><h5 class="white-text">Links</h5><ul data-bind="foreach: urlList"><a href="" class="btn-floating btn-small waves-effect waves-light white"><img id="github-image" src="images/images_src/github.ico"> </a><a data-bind="attr:{href: url}" class="waves-effect waves-light"><img data-bind="attr: {src: image}"></a></ul></div></div></div><div class="footer-copyright pink darken-1"><div class="container">© 2016 Copyright Text <a class="grey-text text-lighten-4 right" href="#!">More Links</a></div></div></footer><script src="js/lib/jquery.min.js"></script><script src="js/lib/knockout.js"></script><script src="js/lib/materialize.min.js"></script><script src="js/app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Front End Developer located in Charlotte,NC">
+    <meta name="keywords" content="HTML,CSS3,JavaScript, frameworks, responsive web design,web developer, material design, SEO, website optimization, jasmine test cases, freelance front end developer">
+    <meta name="author" content="Dhanya Kuttikkatt Thilakan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhanya Kuttikkatt Thilakan | Front End Developer </title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <style>
+.pic,.profilePic{border:5px solid #fff}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}body,html{font-family:"Roboto Condensed light",sans-serif;font-size:medium}img{max-width:100%}@media screen and (min-width:800px){.slider,.slides{height:600px}}.img-wrapper,.wrap{height:30%;width:100%}.card-back{width:100%}.pic{margin-top:25%}.profilePic{display:block;margin-left:auto;margin-right:auto;border-radius:50%}#f1_container{z-index:1;perspective:1000px}#f1_card{transform-style:preserve-3d;transition:all 1s linear}#click_container:click #f1_card,#f1_container:hover #f1_card{transform:rotateY(180deg);box-shadow:-5px 5px 5px #aaa}.face{position:absolute;backface-visibility:hidden}.face.back{transform:rotateY(180deg);text-align:center;background-color:#fff}#github-image{display:block;margin:4px auto auto}
+</style>
+</head>
+
+<body class="grey lighten-4">
+    <header>
+        <!-- Navbar -->
+        <nav >
+            <div class="nav-wrapper pink darken-1 divider">
+                <a href="#!" class="brand-logo right">Web developer</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse white-text"><i class="material-icons">menu</i></a>
+                <ul class="left hide-on-med-and-down">
+                    <li class="active"><a href="#about">About</a></li>
+                    <li class="active"><a href="#education">Education</a></li>
+                    <li class="active"><a href="#projects">Projects</a></li>
+                    <li class="active"><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="divider"></div>
+
+        <!-- Slider Wrapper -->
+    <main class="container">
+        <section class="slider grey lighten-3">
+            <ul class="slides" data-bind="foreach: carouselList">
+                <li>
+                    <img class="responsive-img" data-bind="attr:{src: imgSrc}" alt="projectImages" id="slider-img">
+                    <div class="caption left-align">
+                        <h3 class="pink-text" data-bind="text: title"></h3>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+        <!-- Cards for project -->
+        <div class="row grey lighten-3">
+            <!-- About  Card -->
+            <article class="col s12 m6 l3" id="about">
+                <div id="f1_container">
+                    <div class="card medium" id="f1_card">
+                        <div class=" pink accent-3 center-align img-wrapper front face">
+                            <img src="images/dhanya.jpg" class="circle pic">
+                            <h5> Dhanya</h5>
+                            <h6>Web Developer</h6>
+                            <div class="card-content">
+                                <p> I am Front end web developer located in Charlotte,NC</p>
+                            </div>
+                        </div>
+                        <div class="card-back card medium black-text back face">
+                            <div class="card-content">
+                                <h6>About Me</h6>
+                                <p>Passionate about front end development</p>
+                                <a href="https://docs.google.com/document/d/1ghQYpUTSItw3jxQeuxC7__Txnp9a-lukOz9DfaaL9bo/edit?usp=sharing" class="waves-effect waves-light btn pink">Resume</a>
+                            </div>
+                            <div class="card-action">
+                                <ul data-bind="foreach : urlList">
+                                    <a data-bind="attr:{href: url}" class="waves-effect waves-light white">
+                                        <img data-bind="attr: {src: image}" alt="logos">
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!-- Education card -->
+            <article class="col s12 m6 l3" id="education">
+                <div class="card medium ">
+                    <div class="card-content pink accent-3">
+                        <span class="card-title white-text">Education</span>
+                    </div>
+                    <ul data-bind="foreach: courseList">
+                        <ul class="collection" data-bind="foreach: course">
+                            <li class="collection-item" data-bind="text: $data"></li>
+                        </ul>
+                    </ul>
+                    <div class="card-action">
+                        <a href="https://www.udacity.com/">Udacity</a>
+                    </div>
+                </div>
+            </article>
+            <!-- Skill card -->
+            <article class="col s12 m6 l3">
+                <div class="card medium">
+                    <div class="card-content pink accent-3">
+                        <span class="card-title white-text"> Skills</span>
+                    </div>
+                    <ul data-bind="foreach: skillList">
+                        <ul class="collection" data-bind="foreach: skill">
+                            <li class="collection-item" data-bind="text: $data"></li>
+                        </ul>
+                    </ul>
+                </div>
+            </article>
+           <!--Project Card  -->
+            <article class="col s12 m6 l3" id="projects">
+                    <div class="card medium">
+                        <div class=" card-content pink accent-3">
+                            <span class="card-title white-text">Projects</span>
+                        </div>
+                        <ul class="collection" data-bind="foreach: carouselList">
+                            <li class="collection-item" data-bind="text: title">Alvin</li>
+                        </ul>
+                        <div class="card-action">
+                            <a class="btn-floating btn-small waves-effect waves-light white" href="https://github.com/dhanyakt">
+                                <img src="images/github.png" alt="github logo" id="github-image">
+                            </a>
+                        </div>
+                    </div>
+            </article>
+        </div>
+    <!-- Footer -->
+    <footer class="page-footer pink accent-3" id="contact" >
+        <div class="container">
+            <div class="row ">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <h6 class=" white-text text-lighten-1">Let's Connect </h6>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul data-bind="foreach: urlList">
+                        <!-- ko if: title === "github" -->
+                        <a  href="" class="btn-floating btn-small waves-effect waves-light white">
+                            <img id="github-image" src="images/github.png">
+                        </a>
+                        <!-- /ko -->
+                        <!-- ko if: title !== "github" -->
+                        <a data-bind="attr:{href: url}" class="waves-effect waves-light">
+                            <img data-bind="attr: {src: image}">
+                        </a>
+                        <!-- /ko -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="footer-copyright  pink darken-1">
+                <div class="container">
+                    © 2016 Copyright Text
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+            </div>
+    </footer>
+
+    <!--Script tags -->
+    <script src="js/lib/jquery.min.js"></script>
+    <script src="js/lib/knockout.js"></script>
+    <script src="js/lib/materialize.min.js"></script>
+    <script src="js/app.min.js"></script>
+</body>
+</html>
