@@ -3,8 +3,6 @@ $(document). ready(function(argument) {
     $('.slider').slider();
 });
 
-
-
 var skills = [{
     "skill_list": ["HTML5","CSS3","JavaScript","jQuery","Java","Ajax"]
 }];
@@ -16,47 +14,33 @@ var educationList = [{
 var links = [{
     "title": "github",
     "url": "https://github.com/dhanyakt",
-    "image": ""
+    "image": "images/github.png"
 },{
     "title": "linkedin",
-    "url": "",
-    "image": ""
+    "url": "https://www.linkedin.com/in/dhanyakt",
+    "image": "images/linkedin.png"
+},{
+    "title": "facebook",
+    "url": "http://www.facebook.com",
+    "image": "images/facebook.png"
 },{
     "title": "gmail",
-    "url": "",
-    "image": ""
-},{
-    "title": "gmail",
-    "url": "",
-    "image": ""
+    "url": "http://www.google.com",
+    "image": "images/Gmail-icon.png"
 }];
-
-
 
 var contentList = [{
     "title": "Neighbhorhood Map",
-    "imgSrc": "images/map.jpg",
-    "description": "A single-page web application, built using the Knockout framework," +
-        "that displays a Google Map of an area and various points of interest." +
-        "Users can search all included landmarks and, when selected," +
-        "additional information about a landmark is presented from the" +
-        "FourSquare and Wikipedia APIs."
+    "imgSrc": "images/map.jpg"
 },{
     "title": "Arcade Game",
-    "imgSrc": "images/game.jpg",
-    "description": " An HTML5 Canvas powered video game, developed using the " +
-        "best practices in Object Oriented JavaScript."
+    "imgSrc": "images/game.JPG"
 }, {
-    title: "Website Optimization",
-    imgSrc: "images/web_opt.jpg",
-    description: "Optimized an inefficient web application's JavaScript," +
-        "CSS and assets delivery, ensuring it runs at 60fps and achieves a PageSpeed" +
-        "score of at least 90."
+    "title": "Website Optimization",
+    "imgSrc": "images/web_opt.JPG"
 },{
-    "title": "Portfolio",
-    "imgSrc": "images/kitten_portfolio.jpg",
-    "description": "single page application with responsive images" +
-        "and responsive layout."
+    "title": "Bootstrap portfolio",
+    "imgSrc": "images/kitten_portfolio.JPG"
 }];
 
 
@@ -64,7 +48,6 @@ var Content = function(data) {
     var self = this;
     this.title = data.title;
     this.imgSrc = data.imgSrc;
-    this.description = data.description;
 }
 
 var Skills = function(data) {
@@ -77,12 +60,16 @@ var Education = function(data) {
     this. course = data.education;
 }
 
+var Urls = function(data) {
+    var self = this;
+    this.title = data.title;
+    this.url = data.url;
+    this.image = data.image;
+}
+
 
 var ViewModel = function() {
     var self = this;
-
-//    self.profilePic = ko.observable();
-//    self.profilePic('images/dhanya.jpg');
 
     self.carouselList = ko.observableArray([]);
     contentList.forEach(function(contents) {
@@ -99,10 +86,13 @@ var ViewModel = function() {
         self.courseList.push(new Education(course));
     });
 
+    self.urlList = ko.observableArray([]);
+    links.forEach(function(urlLinks){
+        self.urlList.push(new Urls(urlLinks));
+    });
 
     this.currentCarouselItem = ko.observable(this.carouselList()[0]);
     console.log("current Item:" + this.currentCarouselItem);
-
 }
 
 ko.applyBindings(new ViewModel());
