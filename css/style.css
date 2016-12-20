@@ -63,8 +63,8 @@ img {
 }
 
 .face.back {
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
     text-align: center;
     background-color: white;
 }
