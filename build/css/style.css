@@ -1,0 +1,66 @@
+html,body {
+    font-family: "Roboto Condensed light", sans-serif;
+    font-size: medium;
+}
+img {
+    max-width: 100%;
+}
+@media screen and (min-width: 800px) {
+    .slider,.slides {
+        height: 600px;
+    }
+}
+.img-wrapper,.wrap {
+    height: 30%;
+    width: 100%;
+}
+.card-back {
+    width: 100%;
+}
+.pic {
+    margin-top: 25%;
+    border: 5px solid white;
+}
+.profilePic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+#f1_container {
+    z-index: 1;
+    perspective: 1000px;
+}
+#f1_card {
+    transform-style: preserve-3d;
+    transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card
+{
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+}
+
+.face {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.face.back {
+    transform: rotateY(180deg);
+    text-align: center;
+    background-color: white;
+}
+#github-image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4px;
+    margin-bottom: auto;
+    display: block;
+}
+#click_container:click #f1_card
+{
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+}
